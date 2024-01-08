@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cuenta atrás</title>
+  </head>
+  <body>
+    <div id="cuentaAtras"></div>
+
+    <script>
+      // Tiempo en segundos
+      var tiempoRestante = 25 * 60; // 25 minutos
+
+      // Función para actualizar la cuenta atrás
+      function actualizarCuentaAtras() {
+        var minutos = Math.floor(tiempoRestante / 60);
+        var segundos = tiempoRestante % 60;
+
+        // Formatear los minutos y segundos para que tengan dos dígitos
+        minutos = minutos < 10 ? "0" + minutos : minutos;
+        segundos = segundos < 10 ? "0" + segundos : segundos;
+
+        // Actualizar el contenido del elemento HTML
+        document.getElementById("cuentaAtras").innerHTML =
+          minutos + ":" + segundos;
+
+        // Reducir el tiempo restante
+        tiempoRestante--;
+
+        // Verificar si se alcanzó el tiempo límite
+        if (tiempoRestante < 0) {
+          clearInterval(intervalID); // Detener la cuenta atrás
+          alert("¡Tiempo terminado!");
+        }
+      }
+
+      // Llamar a la función cada segundo
+      var intervalID = setInterval(actualizarCuentaAtras, 1000);
+
+      // También puedes agregar un botón para detener la cuenta atrás si lo deseas
+      /*
+document.getElementById('detenerCuentaAtras').addEventListener('click', function() {
+  clearInterval(intervalID);
+});
+*/
+    </script>
+  </body>
+</html>
