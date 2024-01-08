@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "pokemon";
+  src: url("../fonts/Pokemon_Pixel_Font_Regular/pokemon_pixel_font.ttf")
+    format("truetype");
+  font-style: normal;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: pokemon, serif;
+  font-size: 35px;
+  color: #fafafa;
+
+  --blanco: #fafafa;
+  --morado: #ab85ff;
+  --gris-sombra: #b8b8b8;
+}
+
+.container {
+  width: 25rem;
+  height: 13.5rem;
+  background-image: url("../img/fondo.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  padding: 50px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.times,
+.options {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.times p,
+.start {
+  padding: 15px;
+  border: 2px solid var(--blanco);
+  border-radius: 40px;
+
+  text-shadow: 0.03rem 0.04rem 0.01rem var(--gris-sombra);
+}
+
+.time {
+  font-size: 7rem;
+  text-shadow: 0.1rem 0.1rem 0.01rem var(--gris-sombra);
+}
+
+.active,
+.start {
+  background-color: var(--blanco);
+  color: var(--morado);
+}
+
+.veces {
+  display: flex;
+  gap: 1rem;
+}
+
+.circulo {
+  width: 10px;
+  height: 10px;
+  border: 1px solid white;
+  border-radius: 50px;
+}
