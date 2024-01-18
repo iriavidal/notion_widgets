@@ -47,7 +47,8 @@
 }
 
 .times p,
-.start {
+.start,
+.stop {
   padding: 15px;
   border: 2px solid var(--blanco);
   border-radius: 40px;
@@ -61,7 +62,8 @@
 }
 
 .active,
-.start {
+.start,
+.stop {
   background-color: var(--blanco);
   color: var(--morado);
 }
