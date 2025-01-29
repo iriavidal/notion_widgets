@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Widget de Tamaño</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+      .widget {
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="widget">
+      <h2>Tamaño del Widget</h2>
+      <p id="size"></p>
+    </div>
+
+    <script>
+      function updateSize() {
+        const widget = document.querySelector(".widget");
+        const width = widget.offsetWidth;
+        const height = widget.offsetHeight;
+        document.getElementById(
+          "size"
+        ).textContent = `Ancho: ${width}px, Alto: ${height}px`;
+      }
+
+      window.addEventListener("resize", updateSize);
+      window.addEventListener("load", updateSize);
+    </script>
+  </body>
+</html>
