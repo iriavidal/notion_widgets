@@ -11,6 +11,8 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   overflow-x: auto;
+
+  font-size: 12px;
 }
 
 /* Estilos de la tabla */
@@ -25,7 +27,7 @@ table {
 
 th,
 td {
-  padding: 15px;
+  padding: 5px;
   text-align: left;
   border: 1px solid #e0e0e0;
 }
@@ -36,7 +38,7 @@ thead {
 }
 
 th {
-  padding: 18px 15px;
+  padding: 10px 5px;
   font-weight: bold;
   text-align: center;
   font-size: 1.1em;
