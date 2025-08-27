@@ -1,9 +1,7 @@
 /* Estilos generales */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #faf7f8;
-  color: #5a5a5a;
-  padding: 20px;
+  padding: 0.5rem;
   line-height: 1.6;
 }
 
@@ -22,7 +20,7 @@ table {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin: 20px 0;
+  margin: 1rem 0;
 }
 
 th,
